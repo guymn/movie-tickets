@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie.model';
+import { SeatData } from './seatData.model';
 
 @Injectable()
 export class Theater {
@@ -8,16 +10,3 @@ export class Theater {
   public seatPrice?: number;
   public seatData?: SeatData;
 }
-
-interface Movie {
-    name: string;
-    genre: string;
-    rate: string;
-    length: number;
-    coverImage: string;
-  }
-  
-  interface SeatData {
-    numRows: number;
-    numSeatsPerRow: number;
-  }

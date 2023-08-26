@@ -6,13 +6,10 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class RestDataSource {
-  showUrl: string;
-  theaterUrl: string;
+  private showUrl = `https://cpsu-test-api.herokuapp.com/api/camt2023/shows`;
+  private theaterUrl = `https://cpsu-test-api.herokuapp.com/api/camt2023/theaters`;
 
-  constructor(private http: HttpClient) {
-    this.showUrl = `https://cpsu-test-api.herokuapp.com/api/camt2023/shows`;
-    this.theaterUrl = `https://cpsu-test-api.herokuapp.com/api/camt2023/theaters`;
-  }
+  constructor(private http: HttpClient) {}
 
   getShows(): Observable<Show[]> {
     return this.http.get<Show[]>(this.showUrl);
@@ -21,4 +18,5 @@ export class RestDataSource {
   getTheater(): Observable<Theater[]> {
     return this.http.get<Theater[]>(this.theaterUrl);
   }
+
 }

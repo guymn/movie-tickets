@@ -1,0 +1,22 @@
+.movie-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+}
+.movie-image {
+    margin: 15px;
+}
+.movie-details {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.movie-name {
+    color: blue;
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+.movie-detail {
+    color: rgb(54, 54, 54);
+    font-size: 1rem;
+}

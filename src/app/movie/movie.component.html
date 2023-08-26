@@ -1,1 +1,15 @@
-<p>movie works!</p>
+<div class="movie-container">
+  <div class="movie-image">
+    <img [src]="getImgMovie()" alt="Movie Cover" />
+  </div>
+  <div class="movie-details">
+    <h2 class="movie-name">{{ getName() }}</h2>
+    <label class="movie-detail">หมวดหมู่ : {{ getGenre() }} </label>
+    <label class="movie-detail">เรท : {{ getRate() }} </label>
+    <label class="movie-detail">เวลา : {{ getLength() }} </label>
+  </div>
+</div>
+<div class="round">
+  <h3 style="text-align: left; padding-left: 50px;">รอบฉาย</h3>
+  <div></div>
+</div>

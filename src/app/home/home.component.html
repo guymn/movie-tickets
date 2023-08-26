@@ -1,0 +1,29 @@
+<h1 style="text-align: center">MOVIE TICKETS</h1>
+
+<div></div>
+<div
+  class="btn-group"
+  role="group"
+  aria-label="Basic outlined example"
+  *ngFor="let theater of getTheaters()"
+>
+  <button
+    (click)="onChange(theater)"
+    type="button"
+    [ngClass]="{ active: theater.id === getC() }"
+    class="btn btn-outline-primary"
+  >
+    {{ theater.name }}
+  </button>
+</div>
+<div style="text-align: center">
+  <app-movie [theater]="getTheaterByIdCurrent()"></app-movie>
+</div>
+
+<!-- <div *ngFor="let theater of theaters">
+      <h2>{{ theater.name }}</h2>
+      <p>Movie: {{ theater.movie?.name }}</p>
+      <p>Seat Price: {{ theater.seatPrice }}</p>
+      <p>Number of Rows: {{ theater.seatData?.numRows }}</p>
+      <p>Number of Seats Per Row: {{ theater.seatData?.numSeatsPerRow }}</p>
+    </div> -->
