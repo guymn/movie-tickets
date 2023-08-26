@@ -1,5 +1,4 @@
 import { Component, Input, inject } from '@angular/core';
-import { TheaterRepository } from '../model/theater.repository';
 import { Movie } from '../model/movie.model';
 import { Theater } from '../model/theater.model';
 import { TheaterService } from '../theater.service';
@@ -13,22 +12,19 @@ export class MovieComponent {
   @Input() theater?: Theater;
 
   getImgMovie(): string | undefined {
-    // return this.movie?.coverImage;
-    return 'https://3bugs.com/online-tickets/images/movie01.jpg';
+    return this.theater?.movie?.coverImage;
   }
 
   getGenre(): string | undefined {
-    return 'Action, Adventure, Sci - Fi';
+    return this.theater?.movie?.genre;
   }
   getName(): string | undefined {
-    return 'บลู บีเทิล';
+    return this.theater?.movie?.name;
   }
   getRate(): string | undefined {
-    // return this.movie?.name;
-    return 'G';
+    return this.theater?.movie?.rate;
   }
   getLength(): number | undefined {
-    return 130;
+    return this.theater?.movie?.length;
   }
-
 }

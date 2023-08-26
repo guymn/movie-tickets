@@ -20,10 +20,6 @@
   <app-movie [theater]="getTheaterByIdCurrent()"></app-movie>
 </div>
 
-<!-- <div *ngFor="let theater of theaters">
-      <h2>{{ theater.name }}</h2>
-      <p>Movie: {{ theater.movie?.name }}</p>
-      <p>Seat Price: {{ theater.seatPrice }}</p>
-      <p>Number of Rows: {{ theater.seatData?.numRows }}</p>
-      <p>Number of Seats Per Row: {{ theater.seatData?.numSeatsPerRow }}</p>
-    </div> -->
+<div class="time-list" *ngFor="let show of getShowsForTheater()">
+  <button type="button" class="btn btn-primary">{{ show.showTime }}</button>
+</div>
